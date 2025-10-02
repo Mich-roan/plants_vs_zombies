@@ -5,13 +5,19 @@ using System.Collections;
 public class CoinsSpawner : MonoBehaviour
 {
     [SerializeField]
-    private InstantiatePoolObject coinPool;
+    private UnityEvent<Vector3> onCoinSpawned;
     [SerializeField]
     private LaneManager laneManager;
     [SerializeField]
     private float spawnInterval = 3f;
+    [SerializeField]
+    private float offsetY = 0f;
     private Coroutine spawnCoroutine;
     private bool isActive = false;
+    private void Start()
+    {
+        Activate(true);
+    }
     public void Activate(bool active)
     {
         isActive = active;
@@ -21,7 +27,20 @@ public class CoinsSpawner : MonoBehaviour
         }
         else
         {
-            if (spawnCoroutine !=null)
+            if (spawnCoroutine != null)
+            {
+                StopCoroutine(spawnCoroutine);
+                spawnCoroutine = null;
+            }
         }
-    } 
+    }
+    private IEnumerator SpawnCoins()
+    {
+        while (isActive)
+        {
+            yield return new WaitForSeconds(spawnInterval);
+            Transform frame = laneManager.GetFrameInLane();
+            onCoinSpawned?.Invoke(frame.position + Vector3.up * offsetY);
+        }
+    }
 }
