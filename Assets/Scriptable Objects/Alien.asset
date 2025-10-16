@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68470c6915197a1438cee2ed7ec02095, type: 3}
   m_Name: Alien
   m_EditorClassIdentifier: 
-  attackRange: 5
+  attackRange: 100
   timeBetweenAttacks: 2
   health: 100
-  speed: 25
-  damage: 10
+  speed: 50
+  damage: 30
   enemyName: Alien
   attackAnimation: Atack
   deathAnimation: Die

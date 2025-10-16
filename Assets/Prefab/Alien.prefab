@@ -101,7 +101,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981486398252167789}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0842597, y: 0.88511, z: 0.88511}
   m_ConstrainProportionsScale: 0
@@ -187,6 +187,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3405380563232677597}
   - component: {fileID: 8569592097141244570}
+  - component: {fileID: 1691833123608711040}
+  - component: {fileID: 792857128276882569}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Enemy
@@ -209,6 +211,7 @@ Transform:
   m_Children:
   - {fileID: 8508150424297983777}
   - {fileID: 4510334121928473335}
+  - {fileID: 3441397042827580717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8569592097141244570
@@ -232,6 +235,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 56.706886, y: 198.7131, z: 57.843384}
   m_Center: {x: -1.1006508, y: 87.79768, z: -2.5339966}
+--- !u!114 &1691833123608711040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037126252377019528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cc782cbada73243a3deebdfc6fbab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 7500695038370530199}
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &792857128276882569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037126252377019528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d2d4760f9a81d4f98481a0a6ac8fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 017dec926220c104a952beab60c9ba71, type: 2}
+  health: {fileID: 1691833123608711040}
+  animator: {fileID: 6329081925106651320}
+  enemiesLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  raycastOffset: 100
+  onAttackTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8495359495884621300}
+        m_TargetAssemblyTypeName: InstantiatepoolObjects, Assembly-CSharp
+        m_MethodName: InstantiateObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4597926021801114844
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +396,51 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4892973361473585514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3441397042827580717}
+  - component: {fileID: 8495359495884621300}
+  m_Layer: 0
+  m_Name: InstantiateHitParticles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3441397042827580717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892973361473585514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3405380563232677597}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8495359495884621300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892973361473585514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba949382eded86646a499ad4c766ab2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6263782476919498309, guid: 1fd2749f2a4056446881dce86ed70c39, type: 3}
 --- !u!1 &6449063304631727879
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +594,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 7165376934054828305}
   m_FillRect: {fileID: 5199296836552116387}
   m_HandleRect: {fileID: 2267310759163957043}
@@ -578,19 +676,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f546351126b12458be09525913343a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.009194639
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f546351126b12458be09525913343a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f546351126b12458be09525913343a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.99995774
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f546351126b12458be09525913343a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f546351126b12458be09525913343a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -598,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f546351126b12458be09525913343a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -178.946
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f7f546351126b12458be09525913343a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
