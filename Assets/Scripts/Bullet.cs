@@ -1,11 +1,13 @@
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
     private float speed = 10f;
     [SerializeField]
     private float damage = 20f;
+    [SerializeField]
+    private UnityEvent <Transform> onHitEnemy;
     private Rigidbody rigidbody;
     private void Awake()
     {
@@ -21,12 +23,19 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Health enemyHealth = collision.gameObject.GetComponent<Health>();
-            if (enemyHealth!= null)
+            if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);
             }
             SoundManager.instance.Play("Hit");
+            onHitEnemy?.Invoke(transform);
             gameObject.SetActive(false);
         }
+    }
+    
+    private void OnDisable()
+    {
+        rigidbody.linearVelocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
     }
 }
