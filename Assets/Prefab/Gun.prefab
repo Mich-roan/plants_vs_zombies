@@ -187,6 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 8861420653453750542}
+  animator: {fileID: 6704208432089140066}
+  collider: {fileID: 64505868378261130}
   gunData: {fileID: 11400000, guid: 6e69f2d6a4970ab4096961316b3dd785, type: 2}
   bulletPool: {fileID: 4260002378141152897}
   bulletPivot: {fileID: 2586279403487786627}
@@ -194,7 +196,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   raycastOffset: 2
-  animator: {fileID: 6704208432089140066}
 --- !u!95 &6704208432089140066
 Animator:
   serializedVersion: 7
