@@ -12,15 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68470c6915197a1438cee2ed7ec02095, type: 3}
   m_Name: Alien
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  actionAssets:
+  - soundName: 
+    animationName: Walking
+    actionKey: 1
+  - soundName: Attack
+    animationName: Atack
+    actionKey: 2
+  - soundName: Hit
+    animationName: Hit
+    actionKey: 3
+  - soundName: Die
+    animationName: Die
+    actionKey: 5
+  - soundName: Appear
+    animationName: 
+    actionKey: 4
   attackRange: 100
   timeBetweenAttacks: 2
-  health: 100
+  attackDuration: 1
   speed: 50
   damage: 30
   enemyName: Alien
-  attackAnimation: Atack
-  deathAnimation: Die
-  walkAnimation: Walking
-  hitAnimation: Hit
-  winAnimation: Dancinng
-  idleAnimation: Idle
