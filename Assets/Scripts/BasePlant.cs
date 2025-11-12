@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class BasePlant : MonoBehaviour
 {
-[SerializeField]
+    [Header("Common Components")]
+    [SerializeField]
     protected Health health;
     public Health Health => health;
     [SerializeField]
@@ -16,7 +17,7 @@ public class BasePlant : MonoBehaviour
         set { currentstep = value; }
     }
     protected bool isActive;
-    public bool IsActive
+    public virtual bool IsActive
     {
         set
         {
@@ -24,6 +25,7 @@ public class BasePlant : MonoBehaviour
             collider.enabled = value;
         }
     }
+    
     protected  IEnumerator DieRoutine (string dieAnimationName)
     {
         IsActive = false;
