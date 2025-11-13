@@ -9,19 +9,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52bb34414f9cad40b91aaa15c5d11e3, type: 3}
-  m_Name: FlowerData
+  m_Script: {fileID: 11500000, guid: 68470c6915197a1438cee2ed7ec02095, type: 3}
+  m_Name: Alien2
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 250
   actionAssets:
   - soundName: 
-    animationName: Idle
-    actionKey: 0
+    animationName: walking
+    actionKey: 1
   - soundName: 
     animationName: Attack
     actionKey: 2
-  - soundName: 
+  - soundName: Hit
+    animationName: Hit2
+    actionKey: 3
+  - soundName: Die
     animationName: Die
     actionKey: 5
-  spawnCoinTime: 2
-  coinAmount: 1
+  - soundName: Appear
+    animationName: Idle
+    actionKey: 4
+  attackRange: 150
+  timeBetweenAttacks: 2
+  attackDuration: 1
+  speed: 40
+  damage: 60
+  enemyName: Alien2
