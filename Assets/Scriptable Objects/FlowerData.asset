@@ -17,7 +17,7 @@ MonoBehaviour:
   - soundName: 
     animationName: Idle
     actionKey: 0
-  - soundName: 
+  - soundName: Attack
     animationName: Attack
     actionKey: 2
   - soundName: 
