@@ -17,13 +17,13 @@ MonoBehaviour:
   - soundName: 
     animationName: Idle
     actionKey: 0
-  - soundName: Appear
+  - soundName: Appearp
     animationName: 
     actionKey: 4
-  - soundName: Attack
+  - soundName: Attackp
     animationName: shoot
     actionKey: 2
-  - soundName: Die
+  - soundName: Diep
     animationName: Die
     actionKey: 5
   fireRate: 5

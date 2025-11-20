@@ -17,11 +17,14 @@ MonoBehaviour:
   - soundName: 
     animationName: Idle
     actionKey: 0
-  - soundName: Attack
+  - soundName: Attackp
     animationName: Attack
     actionKey: 2
-  - soundName: 
+  - soundName: Diep
     animationName: Die
     actionKey: 5
-  spawnCoinTime: 2
+  - soundName: Appearp
+    animationName: 
+    actionKey: 4
+  spawnCoinTime: 5
   coinAmount: 1

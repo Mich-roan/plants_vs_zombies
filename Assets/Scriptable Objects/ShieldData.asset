@@ -20,6 +20,6 @@ MonoBehaviour:
   - soundName: Hit
     animationName: Hit
     actionKey: 3
-  - soundName: Die
+  - soundName: Diep
     animationName: Die
     actionKey: 5
