@@ -14,7 +14,7 @@ public class CoinsManager : MonoBehaviour
 
     public bool CanBuy(int cost)
     {
-        if (numberOfCoins >= cost) ;
+        if (numberOfCoins >= cost) 
         {
             SetNumberOfCoins(numberOfCoins - cost);
             return true;

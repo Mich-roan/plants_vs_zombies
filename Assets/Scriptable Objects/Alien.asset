@@ -29,6 +29,9 @@ MonoBehaviour:
   - soundName: Appear
     animationName: 
     actionKey: 4
+  - soundName: Appearp
+    animationName: Dancing
+    actionKey: 6
   attackRange: 100
   timeBetweenAttacks: 2
   attackDuration: 1

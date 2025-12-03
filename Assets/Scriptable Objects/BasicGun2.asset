@@ -15,16 +15,16 @@ MonoBehaviour:
   maxHealth: 200
   actionAssets:
   - soundName: 
-    animationName: Idle
+    animationName: Idle2
     actionKey: 0
   - soundName: Appearp
     animationName: 
     actionKey: 4
   - soundName: Attackp
-    animationName: shoot
+    animationName: shoot2
     actionKey: 2
   - soundName: Diep
-    animationName: Die
+    animationName: Die2
     actionKey: 5
   fireRate: 5
   range: 700
