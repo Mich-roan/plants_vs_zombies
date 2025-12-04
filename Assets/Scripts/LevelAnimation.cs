@@ -26,7 +26,7 @@ public class LevelAnimation : MonoBehaviour
     {
         SoundManager.instance.Play(goSoundName);
     }
-
+    
     public void StartGame()
     {
         onStartGame?.Invoke();

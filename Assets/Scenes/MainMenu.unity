@@ -316,7 +316,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e7c98001b31d444b3f60d1f2a86dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: Game
+  _sceneName: Map
+  fadeAnimator: {fileID: 717627260}
+  fadeAnimationName: Fadeout
+  onSceneLoad:
+    m_PersistentCalls:
+      m_Calls: []
+  onStartScene:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &282729275
 Transform:
   m_ObjectHideFlags: 0
